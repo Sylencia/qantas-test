@@ -1,0 +1,29 @@
+.container {
+  width: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.total {
+  font-size: 12px;
+
+  .nights {
+    font-weight: bold;
+  }
+}
+
+.price {
+  font-weight: bold;
+  font-size: 30px;
+
+  .currency {
+    font-weight: normal;
+    font-size: 16px;
+  }
+}
+
+.savings {
+  color: red;
+}
