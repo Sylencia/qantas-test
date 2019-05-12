@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/qantas-test/static/css/main.b80eda1b.chunk.css",
+    "main.js": "/qantas-test/static/js/main.0beac705.chunk.js",
+    "main.js.map": "/qantas-test/static/js/main.0beac705.chunk.js.map",
+    "runtime~main.js": "/qantas-test/static/js/runtime~main.599e760d.js",
+    "runtime~main.js.map": "/qantas-test/static/js/runtime~main.599e760d.js.map",
+    "static/js/2.ee5d50ee.chunk.js": "/qantas-test/static/js/2.ee5d50ee.chunk.js",
+    "static/js/2.ee5d50ee.chunk.js.map": "/qantas-test/static/js/2.ee5d50ee.chunk.js.map",
+    "index.html": "/qantas-test/index.html",
+    "precache-manifest.e7e5c71af4625c41453e53e64f575972.js": "/qantas-test/precache-manifest.e7e5c71af4625c41453e53e64f575972.js",
+    "service-worker.js": "/qantas-test/service-worker.js",
+    "static/css/main.b80eda1b.chunk.css.map": "/qantas-test/static/css/main.b80eda1b.chunk.css.map",
+    "static/media/qantas-logo.png": "/qantas-test/static/media/qantas-logo.a94aa0fe.png"
+  }
+}
