@@ -1,4 +1,4 @@
-import { extractHotelInformation } from './HotelInfo'
+import { extractHotelInformation, sortHotels } from './HotelInfo'
 
 describe('extractHotelInformation', () => {
   const minTestData = {
@@ -99,5 +99,187 @@ describe('extractHotelInformation', () => {
       currency: 'AUD',
       cancellationType: 'FREE_CANCELLATION',
     })
+  })
+})
+
+// Test data is a cut-down version of the full set of data
+// to keep the test readable if it fails
+describe('sortHotels', () => {
+  const testData = [
+    {
+      offer: {
+        displayPrice: {
+          amount: 1.0,
+          currency: 'AUD',
+        },
+      },
+    },
+    {
+      offer: {
+        displayPrice: {
+          amount: 4.0,
+          currency: 'AUD',
+        },
+      },
+    },
+    {
+      offer: {
+        displayPrice: {
+          amount: 2.0,
+          currency: 'AUD',
+        },
+      },
+    },
+    {
+      offer: {
+        displayPrice: {
+          amount: 3.0,
+          currency: 'AUD',
+        },
+      },
+    },
+    {
+      offer: {
+        displayPrice: {
+          amount: 5.0,
+          currency: 'AUD',
+        },
+      },
+    },
+  ]
+
+  it('sorts by default order correctly', () => {
+    expect(sortHotels(testData, 'default')).toEqual([
+      {
+        offer: {
+          displayPrice: {
+            amount: 1.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 4.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 2.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 3.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 5.0,
+            currency: 'AUD',
+          },
+        },
+      },
+    ])
+  })
+
+  it('sorts by ascending order correctly', () => {
+    expect(sortHotels(testData, 'ascending')).toEqual([
+      {
+        offer: {
+          displayPrice: {
+            amount: 1.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 2.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 3.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 4.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 5.0,
+            currency: 'AUD',
+          },
+        },
+      },
+    ])
+  })
+
+  it('sorts by descending order correctly', () => {
+    expect(sortHotels(testData, 'descending')).toEqual([
+      {
+        offer: {
+          displayPrice: {
+            amount: 5.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 4.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 3.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 2.0,
+            currency: 'AUD',
+          },
+        },
+      },
+      {
+        offer: {
+          displayPrice: {
+            amount: 1.0,
+            currency: 'AUD',
+          },
+        },
+      },
+    ])
   })
 })
