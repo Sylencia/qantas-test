@@ -14,6 +14,8 @@ To run tests:
 yarn test
 ```
 
+The build is also deployed at: http://sylencia.com/qantas-test/
+
 ### Approach
 
 I broke down the page into the following components and subcomponents:
