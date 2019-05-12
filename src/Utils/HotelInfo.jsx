@@ -20,3 +20,15 @@ export const extractHotelInformation = hotelData => {
     ),
   }
 }
+
+export const sortHotels = (hotels, sortType) => {
+  if (sortType === 'default') {
+    return hotels
+  } else if (sortType === 'ascending') {
+    return hotels.sort((a, b) => a.offer.displayPrice.amount - b.offer.displayPrice.amount)
+  } else if (sortType === 'descending') {
+    return hotels.sort((a, b) => b.offer.displayPrice.amount - a.offer.displayPrice.amount)
+  }
+
+  return hotels
+}
