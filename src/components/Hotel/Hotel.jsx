@@ -12,7 +12,7 @@ export const Hotel = () => {
         <div className={styles.promotion}>Exclusive Deal</div>
       </div>
       <div className={styles.description}>
-        <div className={styles.information}>Primus Hotel Sydney</div>
+        <Information />
         <Price />
       </div>
     </div>

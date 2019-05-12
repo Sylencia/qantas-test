@@ -1,0 +1,43 @@
+.star {
+  font-size: 24px;
+  color: grey;
+  position: relative;
+
+  &.full:before {
+    color: gold;
+    content: '\2605'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+  }
+
+  &.half:before {
+    color: gold;
+    content: '\2605'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+}
+
+.circle {
+  font-size: 24px;
+  color: grey;
+  position: relative;
+
+  &.full:before {
+    color: gold;
+    content: '\25CF'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+  }
+
+  &.half:before {
+    color: gold;
+    content: '\25CF'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+}
