@@ -1,8 +1,16 @@
 .container {
   display: flex;
   flex-direction: row;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+
+  // Set a border top for all .descriptions,
+  // Then turn it off for each other container beyond the first
+  .description {
+    border-top: 1px solid lightgray;
+  }
+
+  & ~ .container .description {
+    border-top: none;
+  }
 }
 
 .image {
@@ -22,4 +30,6 @@
 .description {
   display: flex;
   flex-direction: row;
+
+  border-bottom: 1px solid lightgray;
 }
